@@ -7,6 +7,8 @@
     "start": "parcel index.html"
   },
   "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
     "autoprefixer": "^9.7.5",
     "postcss-nested": "^4.2.1"
   }
