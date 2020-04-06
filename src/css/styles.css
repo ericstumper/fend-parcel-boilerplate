@@ -3,11 +3,19 @@
 }
 
 body {
-  background: linear-gradient(#e98a00, #f5aa2f);
+  background: blue;
+
+  @media (min-width: 768px) {
+    background: linear-gradient(#e98a00, #f5aa2f);
+  }
 }
 
 main {
   div {
-    color: var(--div-color);
+    color: yellow;
+
+    @media (min-width: 768px) {
+      color: var(--div-color);
+    }
   }
 }

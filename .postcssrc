@@ -1,6 +1,8 @@
 {
   "plugins": {
     "autoprefixer": true,
-    "postcss-nested": true
+    "postcss-nested": true,
+    "css-mqpacker": true,
+    "postcss-custom-properties": true
   }
 }
