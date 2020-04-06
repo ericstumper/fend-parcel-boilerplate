@@ -2,7 +2,9 @@
   "plugins": {
     "autoprefixer": true,
     "postcss-nested": true,
-    "css-mqpacker": true,
+    "css-mqpacker": {
+      "sort": true
+    },
     "postcss-custom-properties": true
   }
 }
