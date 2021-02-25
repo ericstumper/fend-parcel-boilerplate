@@ -34,18 +34,28 @@ function shop() {
   const productContainer = document.querySelector(".products");
   const productTemplate = `
    ${products
-     .map(
-       (product) => `
+     .map((product, index) => {
+       const sortedVariants = product.variants.sort((variant1, variant2) => {
+         console.log(index, "variant1", variant1);
+         console.log(index, "variant2", variant2);
+         if (variant1.price > variant2.price) {
+           return 1;
+         }
+         return -1;
+       });
+       return `
     <div class="product">
       <h3 class="headline">${product.productName}</h3>
       <div class="description">${product.description}</div>
-      <div class="price">${product.price / 100}€</div>
+      <div class="price">${sortedVariants[0].price / 100} - ${
+         sortedVariants[sortedVariants.length - 1].price / 100
+       }€</div>
       <button class="add-to-cart-button" data-product-id="${
         product.id
       }">Add to cart</button>
     </div>
-   `
-     )
+   `;
+     })
      .join("")} 
   `;
 
